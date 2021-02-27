@@ -5,6 +5,8 @@ declare module '@capacitor/core' {
 }
 
 export interface PusherBeamsPluginPlugin {
+  getDeviceInterests(): Promise<{ interests: Array<String> }>;
   addDeviceInterest(options: { interest: string }): Promise<{ message: string }>;
   removeDeviceInterest(options: { interest: string }): Promise<{ message: string }>;
+  clearDeviceInterests(): Promise<{ message: string }>;
 }

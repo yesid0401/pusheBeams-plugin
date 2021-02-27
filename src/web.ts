@@ -8,12 +8,22 @@ export class PusherBeamsPluginWeb extends WebPlugin implements PusherBeamsPlugin
       platforms: ['web'],
     });
   }
+
+  getDeviceInterests(): Promise<{ interests: Array<String> }>{
+    throw new Error("Method not implemented.");
+  }
+
   addDeviceInterest(options: { interest: string; }): Promise<{ message: string }> {
     console.log(options);
     throw new Error("Method not implemented.");
   }
+
   removeDeviceInterest(options: { interest: string; }): Promise<{ message: string }> {
     console.log(options);
+    throw new Error("Method not implemented.");
+  }
+
+  clearDeviceInterests(): Promise<{ message: string }>{
     throw new Error("Method not implemented.");
   }
 
